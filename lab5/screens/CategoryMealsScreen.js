@@ -30,18 +30,19 @@ const CategoryMealsScreen = ({route, navigation}) => {
       // </View>
     );
   };
-  const {prev, id} = route.params;
+  const {title,id} = route.params;
   const catId = id;
+
 
   const displayedMeals = MEALS.filter(
     (meal) => meal.categoryIds.indexOf(catId) >= 0
   );
-
+  // console.log(displayedMeals)
   return (
     <View style={styles.screen}>
       <FlatList
         style={{ width: "100%" }}
-        data={MEALS}
+        data={displayedMeals}
         renderItem={renderMealItem}
       />
     </View>
