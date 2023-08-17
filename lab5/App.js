@@ -24,7 +24,7 @@ export default function App() {
     <MealsNavigator.Screen name="CategoryMeals" component={CategoryMealsScreen}
       options={ 
         ({ route }) => ({
-          title: route.params.title,
+          title: route.params.title, id: route.params.id
           })
       } />
     <MealsNavigator.Screen name="MealDetail" component={MealDetailScreen} 
